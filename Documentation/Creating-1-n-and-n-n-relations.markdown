@@ -101,7 +101,7 @@ The database structure for the model we just built can be created from a migrati
 
 This migration creates an AddressPartRecord table that is a content part record (this gets us the default fields that a content part needs). It adds columns for address, city and zip that are going to be auto-mapped to our record's properties.
 
-The interesting column here is StateRecord_Id. As you can see, its type is the same as the type of the Id column of the StateRecord class, because the system will be able to recognize this as a foreign key and to map that integer value to a StateRecord property by just following the relation. It is important here that the name of the column that will represent the relation is the name of the column on the "1" end of the relation, followed by an underscore and the name of the column of the "n" end of the relation.
+The interesting column here is StateRecord_Id. As you can see, its type is the same as the type of the Id column of the StateRecord class, because the system will be able to recognize this as a foreign key and to map that integer value to a StateRecord property by just following the relation. It is important here that the name of the column that will represent the relation is the name of the table on the "n" end of the relation, followed by an underscore and the name of the column of the "n" end of the relation.
 
 There is nothing remarkable on the StateRecord table: it's just mapping Id to be the primary key and constraining the Code column to be 2 characters long.
 
